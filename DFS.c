@@ -5,11 +5,11 @@ int a[20][20],reach[20],n;
 void dfs(int v)
 {
     int i;
+    printf("%d\t",v);
     reach[v]=1;
     for (i=1; i<=n; i++)
         if(a[v][i] && !reach[i])
         {
-            printf("\n %d->%d",v,i);
             dfs(i);
         }
 }
