@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 
-#define max 2000
+#define max 10
 
 int a[max];
 int b[max];
@@ -63,7 +63,10 @@ int main()
     start=clock();
     sort(0, max);
     end=clock();
-    printf("\nList sorted\n");
+    printf("Sorted Array: \n");
+    for(i = 0;i<max-1; i++){
+        printf("%d\t", a[i]);
+    }
 
     printf("\nTime taken to sort %d values: %f", max, (double)(end-start)/CLOCKS_PER_SEC);
 }
